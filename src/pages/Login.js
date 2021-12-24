@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../auth/firebase-config";
-
+import oscar1 from "../img/movie.ico";
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
@@ -24,7 +24,22 @@ const Login = () => {
         <img src={"https://picsum.photos/800/800"} alt="sample-movie" />
       </div>
       <div className="register-form">
-        <h1 className="form-title display-3">Login</h1>
+        <img
+          className="oscar"
+          style={{
+            height: "150px",
+            width: "150px",
+            margin: "0 auto 20px",
+            display: "block",
+            // padding: "0 30px",
+            // backgroundColor: "white",
+            // borderRadius: "30%",
+          }}
+          src={oscar1}
+          alt="oscar"
+        />
+        <h1 className="form-title display-3">Login </h1>
+
         <form id="login">
           <div className="mb-3">
             <label for="email" className="form-label display-4">
@@ -32,6 +47,7 @@ const Login = () => {
             </label>
             <input
               type="email"
+              style={{ lineHeight: "36px" }}
               className="form-control"
               id="email"
               placeholder="Enter your email address..."
@@ -43,6 +59,7 @@ const Login = () => {
               Password
             </label>
             <input
+              style={{ lineHeight: "36px" }}
               type="password"
               className="form-control"
               id="password"
@@ -51,6 +68,7 @@ const Login = () => {
             />
           </div>
           <input
+            style={{ lineHeight: "36px" }}
             type="button"
             className="btn btn-primary form-control"
             value="Login"

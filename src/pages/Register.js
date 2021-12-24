@@ -2,6 +2,7 @@ import { useState } from "react";
 import { auth } from "../auth/firebase-config";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import oscar1 from "../img/movie.ico";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -28,13 +29,28 @@ const Register = () => {
         <img src={"https://picsum.photos/800/800"} alt="sample-movie" />
       </div>
       <div className="register-form">
-        <h1 className="form-title display-3">Register</h1>
+        <img
+          className="oscar"
+          style={{
+            height: "150px",
+            width: "150px",
+            margin: "0 auto 20px",
+            display: "block",
+            // padding: "0 30px",
+            // backgroundColor: "white",
+            // borderRadius: "30%",
+          }}
+          src={oscar1}
+          alt="oscar"
+        />
+        <h1 className="form-title display-3">Register </h1>
         <form id="register">
           <div className="mb-3">
             <label for="first-name" className="form-label display-4">
               First Name
             </label>
             <input
+              style={{ lineHeight: "36px" }}
               type="text"
               className="form-control"
               id="first-name"
@@ -47,6 +63,7 @@ const Register = () => {
               Last Name
             </label>
             <input
+              style={{ lineHeight: "36px" }}
               type="text"
               className="form-control"
               id="last-name"
@@ -59,6 +76,7 @@ const Register = () => {
               Email
             </label>
             <input
+              style={{ lineHeight: "36px" }}
               type="email"
               className="form-control"
               id="email"
@@ -71,6 +89,7 @@ const Register = () => {
               Password
             </label>
             <input
+              style={{ lineHeight: "36px" }}
               type="password"
               className="form-control"
               id="password"
@@ -79,6 +98,7 @@ const Register = () => {
             />
           </div>
           <input
+            style={{ lineHeight: "36px" }}
             type="button"
             className="btn btn-primary form-control"
             value="Register"
